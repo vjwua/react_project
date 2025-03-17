@@ -9,6 +9,13 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    port: 9600
+    port: 9600,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9500/new-accounting/backend',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   }
 })

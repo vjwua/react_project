@@ -1,13 +1,12 @@
-import TableCards from "../components/TableCards";
-import EmployeeForm from "../components/EmployeeForm"
-import SalaryForm from "../components/SalaryForm"
+//import TableCard from "../components/TableCard";
+import EmployeeListings from "../components/EmployeeListings";
+import SalaryListings from "../components/SalaryListings";
 
 export default function MainPage() {
-    return(
+    return (
         <>
-            <TableCards />
-            <EmployeeForm />
-            <SalaryForm />
+            <EmployeeListings isHome={true} />
+            <SalaryListings isHome={true} />
         </>
     );
 }
